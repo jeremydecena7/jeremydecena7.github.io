@@ -16,7 +16,7 @@ body {
 
 /* --- Header --- */
 header {
-  background: linear-gradient(to right, 135deg, #3A6F43, #819067); /* strong deep green */
+  background: linear-gradient(135deg, #819067, #3A6F43); /* strong deep green */
   padding: 20px 0;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
