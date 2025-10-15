@@ -1,37 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Art Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth; /* enables smooth scrolling */
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>My Art Portfolio</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="character.html">Character Design</a></li>
-        <li><a href="background.html">Background Design</a></li>
-        <li><a href="animation.html">Animations</a></li>
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#character">Character Design</a></li>
+        <li><a href="#background">Background Design</a></li>
+        <li><a href="#animation">Animations</a></li>
+        <li><a href="#about">About</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section id="hero">
-    <h2>Hello, I'm [Your Name]</h2>
-    <p>A passionate Digital Artist specializing in character design, background art, and animation.</p>
-    <a href="character.html" class="btn">View My Works</a>
+    <h2>Welcome to My Art Portfolio</h2>
+    <p>Explore my character designs, backgrounds, and animations below.</p>
+    <a href="#character" class="btn">View My Work</a>
   </section>
 
+  <!-- Character Design Section -->
+  <section id="character">
+    <h2>Character Design</h2>
+    <div class="gallery">
+      <div class="art-card">
+        <img src="images/character1.jpg" alt="Character Design 1">
+        <p>Character Concept 1</p>
+      </div>
+      <div class="art-card">
+        <img src="images/character2.jpg" alt="Character Design 2">
+        <p>Character Concept 2</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Background Design Section -->
+  <section id="background">
+    <h2>Background Design</h2>
+    <div class="gallery">
+      <div class="art-card">
+        <img src="images/background1.jpg" alt="Background Design 1">
+        <p>Background 1</p>
+      </div>
+      <div class="art-card">
+        <img src="images/background2.jpg" alt="Background Design 2">
+        <p>Background 2</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Animation Section -->
+  <section id="animation">
+    <h2>Animations</h2>
+    <div class="gallery">
+      <div class="art-card">
+        <video controls>
+          <source src="videos/animation1.mp4" type="video/mp4">
+        </video>
+        <p>Animation 1</p>
+      </div>
+      <div class="art-card">
+        <video controls>
+          <source src="videos/animation2.mp4" type="video/mp4">
+        </video>
+        <p>Animation 2</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
-    <p>I'm a 4th-year IT student majoring in Digital Arts, focused on creating expressive characters, immersive worlds, and captivating animations.</p>
+    <p>
+      I am passionate about animation and character design, with experience in storyboarding, background art, and visual storytelling.
+    </p>
   </section>
 
   <footer>
-    <p>© 2025 [Your Name] | <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <p>© 2025 My Art Portfolio. All rights reserved. | <a href="#">Back to top</a></p>
   </footer>
 </body>
 </html>
