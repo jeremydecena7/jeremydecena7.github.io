@@ -7,8 +7,8 @@
 }
 
 body {
-  background: #ECFAE5; /* soft mint background */
-  color: #334443;      /* dark muted green text */
+  background: #FEFAE0; /* soft light cream background */
+  color: #3A6F43;      /* dark forest green text */
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,7 +16,7 @@ body {
 
 /* --- Header --- */
 header {
-  background: #B0DB9C; /* fresh green header */
+  background: #3A6F43; /* strong deep green */
   padding: 20px 0;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -24,7 +24,7 @@ header {
 
 header h1 {
   font-size: 1.8rem;
-  color: #ECFAE5;
+  color: #FEFAE0;
   letter-spacing: 1px;
 }
 
@@ -40,29 +40,29 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #334443;
+  color: #FEFAE0;
   font-weight: 500;
   transition: color 0.25s ease, border-bottom 0.25s ease;
   padding-bottom: 4px;
 }
 
 nav ul li a:hover {
-  color: #CAE8BD;
+  color: #B1AB86;
 }
 
 /* --- Active Navigation Link --- */
 nav ul li a.active {
-  color: #334443;
+  color: #FEFAE0;
   font-weight: 600;
-  border-bottom: 2px solid #CAE8BD;
+  border-bottom: 2px solid #B1AB86;
 }
 
 /* --- Hero Section --- */
 #hero {
   text-align: center;
   padding: 100px 20px;
-  background: linear-gradient(135deg, #DDF6D2 0%, #B0DB9C 100%);
-  color: #334443;
+  background: linear-gradient(135deg, #819067 0%, #3A6F43 100%);
+  color: #FEFAE0;
   border-radius: 10px;
   margin: 30px auto;
   max-width: 900px;
@@ -80,8 +80,8 @@ nav ul li a.active {
 }
 
 #hero .btn {
-  background: #CAE8BD;
-  color: #334443;
+  background: #B1AB86;
+  color: #3A6F43;
   padding: 10px 25px;
   border-radius: 25px;
   text-decoration: none;
@@ -92,8 +92,8 @@ nav ul li a.active {
 
 #hero .btn:hover {
   background: transparent;
-  color: #334443;
-  border-color: #CAE8BD;
+  color: #FEFAE0;
+  border-color: #B1AB86;
 }
 
 /* --- About Section --- */
@@ -115,18 +115,18 @@ nav ul li a.active {
 }
 
 .art-card {
-  background: #DDF6D2; /* soft card tone */
+  background: #FEFAE0;
   border-radius: 10px;
   padding: 15px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 10px rgba(58, 111, 67, 0.1);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  border: 2px solid rgba(176, 219, 156, 0.25);
+  border: 2px solid rgba(129, 144, 103, 0.2);
 }
 
 .art-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 8px 20px rgba(58, 111, 67, 0.2);
 }
 
 .art-card img,
@@ -134,28 +134,28 @@ nav ul li a.active {
   width: 100%;
   border-radius: 8px;
   margin-bottom: 10px;
-  border: 3px solid #B0DB9C;
+  border: 3px solid #819067;
 }
 
 /* captions */
 .art-card p {
-  color: #334443;
+  color: #3A6F43;
   font-weight: 600;
   margin-top: 6px;
 }
 
 /* --- Footer --- */
 footer {
-  background: #B0DB9C;
+  background: #3A6F43;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
-  color: #334443;
+  color: #FEFAE0;
   font-size: 0.9rem;
 }
 
 footer a {
-  color: #CAE8BD;
+  color: #B1AB86;
   text-decoration: none;
   font-weight: 600;
 }
@@ -193,9 +193,9 @@ section {
 
 section h2 {
   font-size: 2rem;
-  color: #334443;
+  color: #3A6F43;
   margin-bottom: 20px;
-  border-bottom: 3px solid #B0DB9C;
+  border-bottom: 3px solid #819067;
   display: inline-block;
   padding-bottom: 5px;
 }
