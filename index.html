@@ -93,4 +93,48 @@
     <p>© 2025 My Art Portfolio. All rights reserved. | <a href="#">Back to top</a></p>
   </footer>
 </body>
+  <!-- Lightbox Viewer -->
+<div id="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+  <video class="lightbox-content" id="lightbox-video" controls></video>
+</div>
+
+<script>
+  // Lightbox Script
+  const lightbox = document.getElementById("lightbox");
+  const imgElement = document.getElementById("lightbox-img");
+  const videoElement = document.getElementById("lightbox-video");
+  const closeBtn = document.querySelector(".close");
+
+  document.querySelectorAll(".gallery img, .gallery video").forEach(item => {
+    item.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+
+      if (item.tagName === "IMG") {
+        imgElement.src = item.src;
+        imgElement.style.display = "block";
+        videoElement.style.display = "none";
+      } else {
+        videoElement.src = item.querySelector("source").src;
+        videoElement.style.display = "block";
+        imgElement.style.display = "none";
+      }
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+    videoElement.pause(); // Stop video when closed
+  });
+
+  // Close when clicking outside content
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+      videoElement.pause();
+    }
+  });
+</script>
+
 </html>
