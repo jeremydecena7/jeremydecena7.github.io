@@ -7,14 +7,16 @@
 }
 
 body {
-  background: #FAF8F1;
-  color: #334443;
+  background: #FFCF71; /* soft warm cream */
+  color: #7B542F;      /* deep brown text */
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* --- Header --- */
 header {
-  background: #FAEAB1;
+  background: #FF9D00; /* bright header */
   padding: 20px 0;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -22,7 +24,7 @@ header {
 
 header h1 {
   font-size: 1.8rem;
-  color: #334443;
+  color: #FFCF71;
   letter-spacing: 1px;
 }
 
@@ -38,21 +40,29 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #334443;
+  color: #7B542F;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.25s ease, border-bottom 0.25s ease;
+  padding-bottom: 4px;
 }
 
 nav ul li a:hover {
-  color: #34656D;
+  color: #B6771D;
+}
+
+/* --- Active Navigation Link --- */
+nav ul li a.active {
+  color: #7B542F;
+  font-weight: 600;
+  border-bottom: 2px solid #B6771D;
 }
 
 /* --- Hero Section --- */
 #hero {
   text-align: center;
   padding: 100px 20px;
-  background: linear-gradient(to bottom right, #34656D, #334443);
-  color: #FAF8F1;
+  background: linear-gradient(135deg, #B6771D 0%, #7B542F 100%);
+  color: #FFCF71;
   border-radius: 10px;
   margin: 30px auto;
   max-width: 900px;
@@ -64,23 +74,26 @@ nav ul li a:hover {
 }
 
 #hero p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin-bottom: 20px;
+  opacity: 0.95;
 }
 
 #hero .btn {
-  background: #FAEAB1;
-  color: #334443;
+  background: #FF9D00;
+  color: #FFCF71;
   padding: 10px 25px;
   border-radius: 25px;
   text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  font-weight: 700;
+  transition: all 0.25s ease;
+  border: 2px solid transparent;
 }
 
 #hero .btn:hover {
-  background: #334443;
-  color: #FAF8F1;
+  background: transparent;
+  color: #7B542F;
+  border-color: #FF9D00;
 }
 
 /* --- About Section --- */
@@ -102,40 +115,49 @@ nav ul li a:hover {
 }
 
 .art-card {
-  background: #FAEAB1;
+  background: #FFCF71; /* card matches page but stands out via border/shadow */
   border-radius: 10px;
   padding: 15px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(123, 84, 47, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 2px solid rgba(182, 119, 29, 0.12);
 }
 
 .art-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(123, 84, 47, 0.14);
 }
 
 .art-card img,
 .art-card video {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
   margin-bottom: 10px;
-  border: 3px solid #34656D;
+  border: 3px solid #B6771D;
+}
+
+/* captions */
+.art-card p {
+  color: #7B542F;
+  font-weight: 600;
+  margin-top: 6px;
 }
 
 /* --- Footer --- */
 footer {
-  background: #334443;
+  background: #7B542F;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
-  color: #FAF8F1;
+  color: #FFCF71;
   font-size: 0.9rem;
 }
 
 footer a {
-  color: #FAEAB1;
+  color: #FF9D00;
   text-decoration: none;
+  font-weight: 600;
 }
 
 footer a:hover {
@@ -143,13 +165,23 @@ footer a:hover {
 }
 
 /* --- Responsive --- */
-@media (max-width: 600px) {
-  #hero h2 {
-    font-size: 1.8rem;
+@media (max-width: 800px) {
+  #hero {
+    padding: 60px 16px;
   }
 
   nav ul li {
     display: block;
     margin: 8px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .gallery {
+    padding: 20px 12px;
   }
 }
