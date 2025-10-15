@@ -6,25 +6,30 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: #FFCF71; /* soft warm cream */
-  color: #7B542F;      /* deep brown text */
+  background: #C6E7FF; /* sky blue background */
+  color: #333;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* --- Header --- */
 header {
-  background: #FF9D00; /* bright header */
+  background: #FFDDAE;
   padding: 20px 0;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 header h1 {
   font-size: 1.8rem;
-  color: #FFCF71;
+  color: #333;
   letter-spacing: 1px;
 }
 
@@ -40,29 +45,21 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #7B542F;
+  color: #333;
   font-weight: 500;
-  transition: color 0.25s ease, border-bottom 0.25s ease;
-  padding-bottom: 4px;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #B6771D;
-}
-
-/* --- Active Navigation Link --- */
-nav ul li a.active {
-  color: #7B542F;
-  font-weight: 600;
-  border-bottom: 2px solid #B6771D;
+  color: #0077b6;
 }
 
 /* --- Hero Section --- */
 #hero {
   text-align: center;
   padding: 100px 20px;
-  background: linear-gradient(135deg, #B6771D 0%, #7B542F 100%);
-  color: #FFCF71;
+  background: linear-gradient(to bottom right, #D4F6FF, #C6E7FF);
+  color: #333;
   border-radius: 10px;
   margin: 30px auto;
   max-width: 900px;
@@ -74,34 +71,38 @@ nav ul li a.active {
 }
 
 #hero p {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   margin-bottom: 20px;
-  opacity: 0.95;
 }
 
 #hero .btn {
-  background: #FF9D00;
-  color: #FFCF71;
+  background: #FFDDAE;
+  color: #333;
   padding: 10px 25px;
   border-radius: 25px;
   text-decoration: none;
-  font-weight: 700;
-  transition: all 0.25s ease;
-  border: 2px solid transparent;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 #hero .btn:hover {
-  background: transparent;
-  color: #7B542F;
-  border-color: #FF9D00;
+  background: #333;
+  color: #FBFBFB;
 }
 
-/* --- About Section --- */
-#about {
+/* --- Section Styling --- */
+section {
   text-align: center;
-  padding: 60px 20px;
-  max-width: 800px;
-  margin: auto;
+  padding: 80px 20px;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  display: inline-block;
+  border-bottom: 3px solid #FFDDAE;
+  padding-bottom: 5px;
 }
 
 /* --- Gallery Section --- */
@@ -115,47 +116,54 @@ nav ul li a.active {
 }
 
 .art-card {
-  background: #FFCF71; /* card matches page but stands out via border/shadow */
+  background: #D4F6FF;
   border-radius: 10px;
   padding: 15px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(123, 84, 47, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  border: 2px solid rgba(182, 119, 29, 0.12);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .art-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(123, 84, 47, 0.14);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .art-card img,
 .art-card video {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-bottom: 10px;
-  border: 3px solid #B6771D;
+  border: 3px solid #FFDDAE;
 }
 
-/* captions */
 .art-card p {
-  color: #7B542F;
+  color: #333;
   font-weight: 600;
-  margin-top: 6px;
+}
+
+/* --- About Section --- */
+#about {
+  background: #FBFBFB;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 40px 20px;
 }
 
 /* --- Footer --- */
 footer {
-  background: #7B542F;
+  background: #FFDDAE;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
-  color: #FFCF71;
+  color: #333;
   font-size: 0.9rem;
 }
 
 footer a {
-  color: #FF9D00;
+  color: #0077b6;
   text-decoration: none;
   font-weight: 600;
 }
@@ -166,36 +174,18 @@ footer a:hover {
 
 /* --- Responsive --- */
 @media (max-width: 800px) {
-  #hero {
-    padding: 60px 16px;
-  }
-
   nav ul li {
     display: block;
     margin: 8px 0;
   }
+  
+  #hero h2 {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 480px) {
-  #hero h2 {
+  section h2 {
     font-size: 1.6rem;
   }
-
-  .gallery {
-    padding: 20px 12px;
-  }
-}
-
-section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-section h2 {
-  font-size: 2rem;
-  color: #7B542F;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #B6771D;
-  display: inline-block;
-  padding-bottom: 5px;
 }
